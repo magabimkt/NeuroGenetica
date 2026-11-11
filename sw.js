@@ -1,6 +1,6 @@
 /* NeuroGenética: funcionamento sem internet e aviso de versão nova.
    Ao publicar uma versão nova do app, aumente o número abaixo (v1 → v2). */
-const VERSAO = 'neurogenetica-v1';
+const VERSAO = 'neurogenetica-v2';
 const ARQUIVOS = [
   './',
   './index.html',
