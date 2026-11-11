@@ -505,18 +505,7 @@ function renderHome(){
   const pend=cardsPendentes('all').length;
   const edPend=disc.estudo.length-estudoRespondidas();
   app.innerHTML=`
-  <h2 style="margin-top:0">💾 Seu progresso</h2>
-  <div class="panel stack">
-    ${blocoInstalar()}
-    <p class="small muted" style="margin:0">Fica salvo automaticamente neste aparelho. Para levar a outro aparelho, exporte um backup aqui e importe lá.</p>
-    <div class="row"><button class="btn sm" data-act="exportar">⬇️ Exportar backup</button><button class="btn sm" data-act="importar">⬆️ Importar backup</button></div>
-    <input type="file" id="arqBackup" accept="application/json,.json" hidden>
-  </div>
-
-  <h2 id="disciplinas">🚀 Saiba mais</h2>
-  ${blocoPromo()}
-
-  <h2>📖 Seu estudo</h2>
+  <h2 style="margin-top:0">📖 Seu estudo</h2>
   <section class="hero">
     <h1>${esc(disc.nome)}</h1>
     <p class="lead">${esc(disc.desc)} Toque num nó do mapa para abrir o módulo.</p>
@@ -529,6 +518,17 @@ function renderHome(){
       <div class="stat"><b>${s.pomos}</b><span>blocos de foco</span></div>
     </div>
   </section>
+
+  <h2>💾 Seu progresso</h2>
+  <div class="panel stack">
+    ${blocoInstalar()}
+    <p class="small muted" style="margin:0">Fica salvo automaticamente neste aparelho. Para levar a outro aparelho, exporte um backup aqui e importe lá.</p>
+    <div class="row"><button class="btn sm" data-act="exportar">⬇️ Exportar backup</button><button class="btn sm" data-act="importar">⬆️ Importar backup</button></div>
+    <input type="file" id="arqBackup" accept="application/json,.json" hidden>
+  </div>
+
+  <h2 id="disciplinas">🚀 Saiba mais</h2>
+  ${blocoPromo()}
 
   <h2>📅 Para hoje</h2>
   <div class="today">
